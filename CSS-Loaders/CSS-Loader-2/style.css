@@ -1,0 +1,46 @@
+.Outer-Circle{
+    width: 80px;
+    height: 80px;
+    background-color: lightgrey;
+    border: 1px solid rgb(86, 190, 225);
+    border-bottom: 2px grey;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    animation: Outer 4s linear infinite;
+    
+
+}
+.Inner-Circle{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius:50% ;
+    position: absolute;
+    animation: Bounce-Inner 1s linear infinite;
+}
+@keyframes Outer{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}
+@keyframes Bounce-Inner {
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    25%{
+        transform: translate(-30px,0) scale(1.5);
+    }
+    50%{
+        transform: translate(0,30px) scale(1);
+    }
+    75%{
+        transform: translate(30px,0) scale(1.5);
+
+    }
+}
